@@ -1,0 +1,11 @@
+tap 'caskroom/cask'
+tap 'caskroom/fonts'
+brew 'caskroom/cask/brew-cask'
+brew cask install font-hasklig
+brew cask install font-roboto
+brew cask install font-roboto-mono
+brew cask install font-roboto-slab
+brew cask install font-fira-code
+brew cask install font-fira-mono-for-powerline
+brew cask install font-fira-mono
+brew cask install font-fira-sans

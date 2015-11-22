@@ -1,0 +1,5 @@
+---
+- hosts: localhost
+  roles:
+    - { role: xcode, tags: ['xcode'] }
+    - { role: homebrew, tags: ['homebrew'] }

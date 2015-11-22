@@ -1,0 +1,32 @@
+---
+- name: Downloading Homebrew install script
+  get_url:
+    url=https://raw.githubusercontent.com/Homebrew/install/master/install
+    dest=vendor/homebrew/install
+
+- name: Installing Homebrew
+  command: ruby vendor/homebrew/install creates=/usr/local/bin/brew
+
+- name: Running `brew doctor`
+  command: brew doctor
+
+- name: Updating Homebrew
+  homebrew: update_homebrew=yes upgrade_all=yes
+
+- name: Adding Bundle Tap
+  homebrew_tap: tap=homebrew/bundle state=present
+
+- name: Installing Homebrew apps
+  command: brew bundle chdir=roles/homebrew/brewfiles
+
+- name: Installing Homebrew Cask apps
+  command: brew bundle chdir=roles/homebrew/caskfiles
+
+- name: Installing Homebrew Cask fonts
+  command: brew bundle chdir=roles/homebrew/caskfonts
+
+- name: Cleaning up old versions
+  command: brew cleanup
+
+- name: Cleaning up old Casks
+  command: brew cask cleanup
