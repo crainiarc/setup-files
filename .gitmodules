@@ -2,3 +2,6 @@
 	path = vendor/ansible
 	url = git@github.com:ansible/ansible.git
 	branch = devel
+[submodule "vendor/virtualenv"]
+	path = vendor/virtualenv
+	url = git@github.com:pypa/virtualenv.git
