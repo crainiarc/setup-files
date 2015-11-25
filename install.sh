@@ -6,6 +6,7 @@ ANSIBLE_ENV_SETUP=vendor/ansible/hacking/env-setup
 VIRTUALENV_SETUP=vendor/virtualenv/virtualenv.py
 VIRTUALENV_TARGET_DIR=python
 VIRTUALENV_ACTIVATE=$VIRTUALENV_TARGET_DIR/bin/activate
+DEV_NULL=/dev/stdout
 
 if [ ! -e $VIRTUALENV_SETUP ]; then
   echo "Not found: $VIRTUALENV_SETUP"
