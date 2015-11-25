@@ -36,5 +36,5 @@ if [[ -z $(pip show paramiko PyYAML Jinja2 httplib2) ]]; then
 fi
 
 source $ANSIBLE_ENV_SETUP &> $DEV_NULL
-ansible-playbook -i inventory ${VERBOSE+-v} ${ROLES} main.yml
+ansible-playbook -i inventory --ask-become-pass main.yml
 trap - EXIT
