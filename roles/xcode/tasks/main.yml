@@ -1,8 +1,0 @@
----
-- name: Agreeing to Xcode license
-  become: yes
-  script: xcode_license_accept.expect
-
-- name: Installing Xcode command line tools
-  become: yes
-  command: xcode-select --install

@@ -1,7 +1,0 @@
-#!/usr/bin/expect
-spawn sudo xcodebuild -license
-expect ""
-send "q\r"
-expect ""
-send "agree\r"
-expect eof
