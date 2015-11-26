@@ -1,0 +1,15 @@
+set nocompatible
+
+" Configure Vundle
+filetype on
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+if filereadable(expand("~/.vundlefile"))
+  source ~/.vim/.vundlefile
+endif
+
+call vundle#end()
+filetype plugin indent on
