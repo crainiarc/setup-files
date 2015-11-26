@@ -30,3 +30,6 @@
 
 - name: Cleaning up old Casks
   command: brew cask cleanup
+
+- name: Symlinking apps to /Applications
+  command: brew linkapps
