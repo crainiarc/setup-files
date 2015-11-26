@@ -1,0 +1,27 @@
+---
+- name: Creating backup directory
+  file: path=~/.backup_dotfiles state=directory
+
+- name: Checking for non-symlink originals
+  command: test -e ~/{{ item }} -a ! -L ~/{{ item }}
+  failed_when: original_check.rc > 1
+  register: original_check
+  with_items: dotfiles
+  changed_when: false
+
+- name: Making a backup originals
+  command:
+    mv ~/{{ item.0 }} ~/.backup_dotfiles/
+    creates=~/.backup_dotfiles/{{ item.0 }}
+    removes=~/{{ item.0 }}
+  with_together:
+    - dotfiles
+    - original_check.results
+  when: item.1.rc == 0 # item exists and is not a symlink
+
+- name: Creating symlinks for dotfiles
+  file: src={{ ansible_env.PWD }}/roles/dotfiles/files/{{ item }}
+        path=~/{{ item }}
+        state=link
+        force=yes
+  with_items: dotfiles
