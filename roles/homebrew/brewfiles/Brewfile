@@ -65,13 +65,13 @@ brew 'p7zip'
 brew 'pcre'
 brew 'pinentry'
 brew 'pkg-config'
-brew 'postgresql'
+brew 'postgresql', args: ['enable-dtrace']
 brew 'protobuf'
 brew 'pstree'
 brew 'pth'
 brew 'pwgen'
-brew 'python'
-brew 'python3'
+brew 'python', args: ['with-brewed-openssl']
+brew 'python3', args: ['with-brewed-openssl']
 brew 'qt'
 brew 'rabbitmq'
 brew 'ragel'
