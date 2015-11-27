@@ -1,4 +1,5 @@
 ---
 dotfiles:
   - .gitconfig
+  - .gitignore_global
   - .vim
