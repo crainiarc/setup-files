@@ -1,0 +1,14 @@
+# This file uses tabs instead of spaces to indent
+[alias]
+	amend = commit --amend -v
+	br = branch
+	ci = commit -v
+	co = checkout
+	st = status
+
+	# requires Git 1.6.3 or later; %C(auto) requires Git 1.8.3 or later
+	graph = log --graph --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+
+	[user]
+		email = git@kengkiat.com
+		name = Keng Kiat Lim
