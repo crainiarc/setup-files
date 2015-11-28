@@ -2,4 +2,5 @@
 dotfiles:
   - .gitconfig
   - .gitignore_global
+  - .tmux.conf
   - .vim
