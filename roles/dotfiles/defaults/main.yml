@@ -4,3 +4,4 @@ dotfiles:
   - .gitignore_global
   - .tmux.conf
   - .vim
+  - .zshrc
