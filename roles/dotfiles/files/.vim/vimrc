@@ -1,4 +1,5 @@
-set nocompatible
+set nocompatible                                            " Don't bother with Vi compatibility
+syntax enable                                               " Enable syntax highlighting
 
 " Configure Vundle
 filetype on
@@ -13,3 +14,10 @@ endif
 
 call vundle#end()
 filetype plugin indent on
+
+set autoindent
+set autoread                                                " Reload files when changed on disk
+set list                                                    " Show trailing whitespaces
+set listchars=tab:▸\ ,trail:▫
+set number                                                  " Show line number
+set ruler                                                   " Show where you are
