@@ -1,5 +1,6 @@
 *.bak
 *.temp
+*.sw[nop]
 *~
 .DS_Store
 \#*\#

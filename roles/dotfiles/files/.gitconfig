@@ -1,16 +1,39 @@
 # This file uses tabs instead of spaces to indent
 [alias]
+	abbrev = !sh -c 'git rev-parse --short ${1-`echo HEAD`}' -
+	ack = grep --break --heading
 	amend = commit --amend -v
+	both = diff HEAD
 	br = branch
 	ci = commit -v
 	co = checkout
-	st = status
-
-	# requires Git 1.6.3 or later; %C(auto) requires Git 1.8.3 or later
+	count = !sh -c 'git log --oneline | wc -l'
+	dupes = !"git ls-tree -r HEAD | cut -c 13- | sort | uniq -D -w 40"
+	fixup = !sh -c 'git commit --fixup=$1 ${@:2}' -
 	graph = log --graph --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+	oneline = log --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+	patch = add -p
+	refresh = !STASH=$(git stash) && git fetch origin && git rebase origin/master && test \"$STASH\" != \"No local changes to save\" && git stash pop
+	reword = commit --amend --only -v --
+	rollback = !sh -c 'git reset --merge HEAD~${1-1}' -
+	sl = log --graph --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset' --all --simplify-by-decoration
+	st = status
+	staged = diff --cached
+	ten = log -10 --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
+	up = checkout
 
 [core]
 	excludesfile = ~/.gitignore_global
+
+[push]
+	default = simple
+
+[rebase]
+	autosquash = true
+
+[rerere]
+	autoupdate = true
+	enabled = true
 
 [user]
 	email = git@kengkiat.com
