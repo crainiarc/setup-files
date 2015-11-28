@@ -22,8 +22,32 @@
 	ten = log -10 --pretty=format:'%C(auto)%h%Creset%C(auto)%d%Creset %s %C(magenta bold)(%cr)%Creset %C(cyan)<%aN>%Creset'
 	up = checkout
 
+[branch]
+	autosetupmerge = always
+	autosetuprebase = local
+
+[branch "master"]
+	rebase = true
+
+[color]
+	ui = auto
+
 [core]
 	excludesfile = ~/.gitignore_global
+
+[grep]
+	lineNumber = true
+	patternType = perl
+
+[help]
+	autocorrect = 2
+
+[log]
+	decorate = short
+
+[pager]
+	show-branch = true
+	status = true
 
 [push]
 	default = simple
@@ -35,6 +59,12 @@
 	autoupdate = true
 	enabled = true
 
+[status]
+	submodulessummary = true
+
 [user]
 	email = git@kengkiat.com
 	name = Keng Kiat Lim
+
+[include]
+	path = .gitconfig.local
