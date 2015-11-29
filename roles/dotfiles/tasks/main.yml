@@ -25,3 +25,6 @@
         state=link
         force=yes
   with_items: dotfiles
+
+- name: Adding /usr/local/sbin to /etc/paths
+  shell: echo '/usr/local/sbin' | cat - <(sed /local/d /etc/paths) | sudo tee /etc/paths
