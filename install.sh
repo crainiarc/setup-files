@@ -8,8 +8,8 @@ VIRTUALENV_TARGET_DIR=python
 VIRTUALENV_ACTIVATE=$VIRTUALENV_TARGET_DIR/bin/activate
 DEV_NULL=/dev/stdout
 
-echo '/usr/local/bin' | cat - <(sed /local/d /etc/paths) | sudo tee /etc/paths
-echo '/usr/local/sbin' | cat - <(sed /local/d /etc/paths) | sudo tee /etc/paths
+echo '/usr/local/bin
+/usr/local/sbin' | cat - <(sed /local/d /etc/paths) | sudo tee /etc/paths
 
 if [ ! -e $VIRTUALENV_SETUP ]; then
   echo "Not found: $VIRTUALENV_SETUP"
