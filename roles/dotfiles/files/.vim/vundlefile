@@ -1,1 +1,2 @@
 Plugin 'scrooloose/nerdtree'
+Plugin 'altercation/vim-colors-solarized'
