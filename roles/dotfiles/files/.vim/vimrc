@@ -20,8 +20,8 @@ set autoread                                            " Reload files when chan
 set background=dark
 set backspace=2                                         " Fix broken backspace in some setups
 set backupcopy=yes
-set backupdir=~/.vim/tmp/backup//                       " Don't populate working directory with backups
-set directory=~/.vim/swap//                             " Don't populate working directory with swaps
+set backupdir=$HOME/.vim/tmp/backup//                   " Don't populate working directory with backups
+set directory=$HOME/.vim/tmp/swap//                     " Don't populate working directory with swaps
 set encoding=utf-8
 set expandtab                                           " Expand tabs to spaces
 set ignorecase                                          " Case-insensitive search
