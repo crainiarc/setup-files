@@ -1,0 +1,3 @@
+---
+- name: Initializing Vim Bundle
+  command: vim +PluginInstall! +PluginClean +qall

@@ -3,3 +3,4 @@
   roles:
     - { role: dotfiles, tags: ['dotfiles'] }
     - { role: homebrew, tags: ['homebrew'] }
+    - { role: vim, tags: ['vim'] }
