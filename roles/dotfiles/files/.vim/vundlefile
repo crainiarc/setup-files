@@ -1,6 +1,7 @@
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'glts/vim-textobj-comment'
 Plugin 'kana/vim-textobj-user'
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'mileszs/ack.vim'
