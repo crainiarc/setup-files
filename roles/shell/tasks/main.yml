@@ -1,0 +1,26 @@
+---
+- name: Add /usr/local/sbin to /etc/paths
+  become: yes
+  lineinfile:
+    dest=/etc/paths
+    group=wheel
+    line=/usr/local/sbin
+    owner=root
+    insertbefore=BOF
+
+- name: Add /usr/local/bin to /etc/paths
+  become: yes
+  lineinfile:
+    dest=/etc/paths
+    group=wheel
+    line=/usr/local/bin
+    owner=root
+    insertbefore=BOF
+
+- name: Add zsh to /etc/shells
+  become: yes
+  lineinfile:
+    dest=/etc/shells
+    group=wheel
+    line=/usr/local/bin/zsh
+    owner=root
