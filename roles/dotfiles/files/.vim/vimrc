@@ -38,6 +38,7 @@ set showcmd                                             " Show info for the curr
 set smartcase                                           " Case-sensitive search if any caps
 set softtabstop=2                                       " Insert mode tab and BS uses 2 spaces
 set synmaxcol=200                                       " Turn off syntax highlighting for long lines
+set textwidth=0                                         " Do not physically add line breaks
 set tabstop=8                                           " Actual tabs occupy 8 characters
 set wildignore=log/**,node_modules/**,target/**,tmp/**,*.rbc
 set wildmenu                                            " show a navigable menu for tab completion
@@ -46,7 +47,25 @@ set wildmode=longest,list,full
 silent! colorscheme solarized
 
 " Keyboard Remaps
+let mapleader = ','
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
 inoremap jj <ESC>
+nnoremap <leader>a :Ack<space>
+nnoremap <leader>d :NERDTreeToggle<CR>
+nnoremap <leader>f :NERDTreeFind<CR>
+nnoremap <leader>t :CtrlP<CR>
+nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
+nnoremap <leader>] :TagbarToggle<CR>
+noremap <silent> <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
+
+" Plugin Configurations
+if executable('ag')
+  let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
 
 " Load local .vimrc file if it exists
 if filereadable(expand("~/.vimrc.local"))
