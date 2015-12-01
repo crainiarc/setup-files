@@ -26,6 +26,7 @@ set encoding=utf-8
 set expandtab                                           " Expand tabs to spaces
 set ignorecase                                          " Case-insensitive search
 set incsearch                                           " Search as you type
+set hidden                                              " Opening new files in buffer hides the current file
 set laststatus=2                                        " Always show status line
 set list                                                " Show trailing whitespaces
 set listchars=tab:▸\ ,trail:▫
