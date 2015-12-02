@@ -1,0 +1,13 @@
+---
+pipinstalls:
+  - bpython
+  - cffi
+  - doc2dash
+  - i3-py
+  - ipython
+  - psutil
+  - pygit2
+  - pyuv
+  - Sphinx
+  - virtualenvwrapper
+  - powerline-status

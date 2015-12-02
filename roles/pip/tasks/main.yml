@@ -8,3 +8,6 @@
   become: yes
   command: python vendor/pip/get-pip.py creates=/usr/local/bin/pip
 
+- name: Installing Pip modules
+  pip: name={{ item }} extra_args='--user'
+  with_items: pipinstalls

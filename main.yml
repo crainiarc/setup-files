@@ -4,5 +4,4 @@
     - { role: dotfiles, tags: ['dotfiles'] }
     - { role: homebrew, tags: ['homebrew'] }
     - { role: shell, tags: ['shell'] }
-    - { role: pip, tags: ['pip'] }
     - { role: vim, tags: ['vim'] }

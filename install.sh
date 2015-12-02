@@ -2,6 +2,11 @@
 
 set -e
 
+xcode-select -p
+if [ $? -ne 0 ]; then
+  xcode-select --install
+fi
+
 ANSIBLE_ENV_SETUP=vendor/ansible/hacking/env-setup
 VIRTUALENV_SETUP=vendor/virtualenv/virtualenv.py
 VIRTUALENV_TARGET_DIR=python
@@ -37,4 +42,8 @@ fi
 
 source $ANSIBLE_ENV_SETUP &> $DEV_NULL
 ansible-playbook -i inventory --ask-become-pass main.yml
+
+# We don's want to be in pip to install global pip modules
+deactivate
+ansible-playbook -i inventory --ask-become-pass common.yml
 trap - EXIT
