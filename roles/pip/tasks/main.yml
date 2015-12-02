@@ -1,0 +1,10 @@
+---
+- name: Downloding Pip install script
+  get_url:
+    url=https://bootstrap.pypa.io/get-pip.py
+    dest=vendor/pip/get-pip.py
+
+- name: Installing Pip
+  become: yes
+  command: python vendor/pip/get-pip.py creates=/usr/local/bin/pip
+
