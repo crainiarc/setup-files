@@ -47,6 +47,7 @@ brew 'iftop'
 brew 'isl'
 brew 'json-c'
 brew 'lcdf-typetools'
+brew 'libgit2'
 brew 'libpng'
 brew 'macvim', args: ['with-override-system-vim']
 brew 'memcached'
