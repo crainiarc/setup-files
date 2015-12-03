@@ -1,6 +1,7 @@
 ---
 dotfiles:
   - .bash_profile
+  - .config
   - .gitconfig
   - .gitignore_global
   - .tmux.conf
