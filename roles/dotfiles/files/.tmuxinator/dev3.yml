@@ -1,0 +1,16 @@
+# ~/.tmuxinator/dev3.yml
+
+name: dev3
+project_root: .
+
+windows:
+  - editor:
+      layout: 545f,318x81,0,0[318x65,0,0{106x65,0,0,0,105x65,107,0,6,105x65,213,0,7},318x15,0,66,5]
+      panes:
+        - 
+        - 
+        - 
+        - 
+  - server: 
+  - logs: 
+

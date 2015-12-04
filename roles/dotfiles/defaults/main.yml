@@ -6,5 +6,6 @@ dotfiles:
   - .gitconfig
   - .gitignore_global
   - .tmux.conf
+  - .tmuxinator
   - .vim
   - .zshrc

@@ -1,0 +1,15 @@
+# ~/.tmuxinator/dev2.yml
+
+name: dev2
+project_root: .
+
+windows:
+  - editor:
+      layout: cff1,318x81,0,0[318x65,0,0{159x65,0,0,0,158x65,160,0,6},318x15,0,66,5]
+      panes:
+        - 
+        - 
+        - 
+  - server: 
+  - logs: 
+

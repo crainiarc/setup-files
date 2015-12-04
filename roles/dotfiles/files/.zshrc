@@ -30,4 +30,7 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen theme agnoster
 antigen apply
 
+# tmuxinator settings
+export DISABLE_AUTO_TITLE=true
+
 eval "$(fasd --init auto)"
