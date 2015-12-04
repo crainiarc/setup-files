@@ -61,8 +61,8 @@
       "args": {
         "full_heart": "♥",
         "empty_heart": "♥",
-                                "gamify": true,
-                                "steps": 5
+        "gamify": true,
+        "steps": 5
       }
     },
     "powerline.segments.common.sys.uptime": {
