@@ -1,6 +1,7 @@
 bindkey -e # emacs key bindings
 
 export EDITOR='vim'
+export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 # virtualenvwrapper settings
