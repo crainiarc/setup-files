@@ -1,5 +1,6 @@
 ---
 dotfiles:
+  - .antigen
   - .bash_profile
   - .config
   - .gitconfig
