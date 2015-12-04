@@ -21,6 +21,12 @@ export PIP_DOWNLOAD_CACHE=~/.pip/download_cache
 # Antigen bundles
 source ~/.antigen/antigen.zsh
 antigen use oh-my-zsh
+antigen bundle brew
+antigen bundle chruby
+antigen bundle fasd
+antigen bundle kennethreitz/autoenv
+antigen bundle zsh-users/zsh-syntax-highlighting
+antigen bundle zsh-users/zsh-history-substring-search
 antigen theme agnoster
 antigen apply
 
