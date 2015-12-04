@@ -8,3 +8,6 @@
 [submodule "roles/dotfiles/files/.vim/bundle/Vundle.vim"]
 	path = roles/dotfiles/files/.vim/bundle/Vundle.vim
 	url = https://github.com/VundleVim/Vundle.vim.git
+[submodule "vendor/antigen"]
+	path = vendor/antigen
+	url = https://github.com/zsh-users/antigen.git
