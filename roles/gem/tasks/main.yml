@@ -1,3 +1,9 @@
 ---
 - name: Installing Ruby
   command: ruby-install ruby
+
+- name: Installing Compass
+  gem: name=compass pre_release=yes
+
+- name: Installing Tmuxinator
+  gem: name=tmuxinator
