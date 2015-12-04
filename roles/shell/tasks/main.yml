@@ -24,3 +24,7 @@
     group=wheel
     line=/usr/local/bin/zsh
     owner=root
+
+- name: Change default shell to zsh
+  become: yes
+  command: chsh -s /usr/local/bin/zsh
