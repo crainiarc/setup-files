@@ -57,15 +57,12 @@ inoremap jj <ESC>
 nnoremap <leader>a :Ack<space>
 nnoremap <leader>d :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
-nnoremap <leader>t :CtrlP<CR>
-nnoremap <leader>T :CtrlPClearCache<CR>:CtrlP<CR>
 nnoremap <leader>] :TagbarToggle<CR>
 noremap <silent> <leader>V :source $MYVIMRC<CR>:filetype detect<CR>:exe ":echo 'vimrc reloaded'"<CR>
 
 " Plugin Configurations
 if executable('ag')
   let g:ackprg = 'ag --nogroup --nocolor --column --smart-case'
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
 
 silent! python from powerline.vim import setup as powerline_setup
