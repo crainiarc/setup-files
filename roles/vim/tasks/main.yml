@@ -1,4 +1,7 @@
 ---
+- name: Compiling YouCompleteMe
+  command: ./install.sh chdir=~/.vim/bundle/YouCompleteMe
+
 - name: Initializing Vim Bundle
   command: vim +PluginInstall! +PluginClean +qall
 
