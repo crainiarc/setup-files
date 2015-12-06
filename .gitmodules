@@ -11,3 +11,6 @@
 [submodule "roles/dotfiles/files/.antigen"]
 	path = roles/dotfiles/files/.antigen
 	url = https://github.com/zsh-users/antigen.git
+[submodule "roles/dotfiles/files/.vim/bundle/YouCompleteMe"]
+	path = roles/dotfiles/files/.vim/bundle/YouCompleteMe
+	url = https://github.com/Valloric/YouCompleteMe.git
