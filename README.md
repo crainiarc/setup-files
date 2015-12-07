@@ -7,3 +7,7 @@ git clone --recursive https://github.com/crainiarc/setup-files.git && cd setup-f
 sh install.sh
 ```
 
+## Inspiration & Ideas
+* [Greg Hurrell](https://github.com/wincent)
+* [Maximum Awesome](https://github.com/square/maximum-awesome)
+* [SPF13](https://github.com/spf13/spf13-vim)
