@@ -54,7 +54,7 @@ brew 'lcdf-typetools'
 brew 'libgit2'
 brew 'libpng'
 brew 'libtool'
-brew 'macvim', args: ['with-override-system-vim']
+brew 'macvim', args: ['with-python', 'with-override-system-vim']
 brew 'memcached'
 brew 'mercurial'
 brew 'mobile-shell'
