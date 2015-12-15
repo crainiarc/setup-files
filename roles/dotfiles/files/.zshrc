@@ -35,6 +35,9 @@ antigen bundle zsh-users/zsh-history-substring-search
 antigen theme agnoster
 antigen apply
 
+# Clipper settings
+alias clip="nc localhost 8377"
+
 # tmuxinator settings
 export DISABLE_AUTO_TITLE=true
 
