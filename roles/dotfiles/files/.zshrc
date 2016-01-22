@@ -12,6 +12,7 @@ export LANG=en_US.UTF-8
 if which ruby >/dev/null && which gem >/dev/null; then
     PATH="$(ruby -rubygems -e 'puts Gem.user_dir')/bin:$PATH"
 fi
+PATH="$HOME/anaconda3/bin:$PATH"
 
 # virtualenvwrapper settings
 export WORKON_HOME=$HOME/.virtualenvs
