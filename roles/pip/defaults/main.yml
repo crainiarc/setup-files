@@ -5,6 +5,7 @@ pipinstalls:
   - doc2dash
   - i3-py
   - ipython
+  - jupyter
   - psutil
   - pygit2
   - pyuv
